@@ -1,9 +1,11 @@
 {
-    "name": "make-platapi",
-    "version": "1.0.0",
+    "name": "create-platapi",
+    "version": "1.0.1",
+    "description": "Create an API with PlatAPI",
     "main": "./lib/index.js",
     "bin": "./lib/index.js",
     "author": "Jim Heising",
+    "repository": "https://github.com/jheising/make-platapi",
     "license": "MIT",
     "scripts": {
         "build": "rm -Rf ./lib && tsc -p .",
@@ -22,5 +24,9 @@
         "fs-extra": "^11.1.1",
         "inquirer": "^8.2.5",
         "progress-estimator": "^0.3.1"
-    }
+    },
+    "files": [
+        "lib/**/*",
+        "starter-api/**/*"
+    ]
 }
