@@ -1,0 +1,26 @@
+{
+    "name": "make-platapi",
+    "version": "1.0.0",
+    "main": "./lib/index.js",
+    "bin": "./lib/index.js",
+    "author": "Jim Heising",
+    "license": "MIT",
+    "scripts": {
+        "build": "rm -Rf ./lib && tsc -p .",
+        "prepublishOnly": "npm_config_yes=true npx husky-init && yarn husky set .husky/pre-commit \"npx pretty-quick --staged\" && husky install && npm run build",
+        "prepare": "husky install"
+    },
+    "devDependencies": {
+        "@types/fs-extra": "^11.0.1",
+        "@types/inquirer": "^8.2.5",
+        "platapi": "^0.0.8",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.0.4",
+        "husky": "^8.0.0"
+    },
+    "dependencies": {
+        "fs-extra": "^11.1.1",
+        "inquirer": "^8.2.5",
+        "progress-estimator": "^0.3.1"
+    }
+}
