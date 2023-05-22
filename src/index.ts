@@ -38,7 +38,8 @@ import createLogger from "progress-estimator";
                 private: "true",
                 scripts: {
                     dev: "LOG_LEVEL=debug platapi dev",
-                    build: "platapi build"
+                    build: "platapi build",
+                    "generate:docs": "platapi generate:docs"
                 }
             };
 
